@@ -128,16 +128,7 @@ Refusal is treated as a **correct outcome**, not a failure.
 
 ## File Structure
 
-perplexity_clone/
-├── classifier.py # LLM-based query classification
-├── retrieval.py # Web search and page fetching
-├── generator.py # Internal vs grounded answer generation
-├── orchestrator.py # Deterministic control logic
-├── prompts.py # All prompts centralized
-├── utils.py # LLM client and logging
-├── main.py # CLI entry point
-├── requirements.txt
-└── .gitignore
+![File Structure](file_structure.png)
 
 Each file has a single, clearly defined responsibility.
 

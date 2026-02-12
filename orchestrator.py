@@ -13,7 +13,7 @@ def answer_user(user_query):
         return "Can you clarify your criteria before I answer?"
 
     if action == "refuse_or_hedge":
-        return "I can’t give a precise answer to this as stated."
+        return "I can't give a precise answer to this as stated."
 
     if classification["retrieval_decision"] == "no_retrieval":
         return generate_internal_answer(user_query)
@@ -22,6 +22,6 @@ def answer_user(user_query):
     retrieval_result = retrieve(search_query)
 
     if not retrieval_result["results"]:
-        return "I couldn’t find reliable sources for this."
+        return "I couldn't find reliable sources for this."
 
     return generate_grounded_answer(user_query, retrieval_result)
